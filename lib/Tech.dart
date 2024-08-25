@@ -23,6 +23,7 @@ class _TechScreenState extends State {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         centerTitle: true,
         title: Text("TopStory",
             style: GoogleFonts.poppins(

@@ -3,10 +3,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:news_app/EnterScree.dart';
 import 'package:news_app/HomeModel.dart';
 
-import 'package:news_app/TechModel.dart';
+
 import 'package:news_app/Sports.dart';
 import 'package:news_app/Tech.dart';
-import 'package:news_app/TechController.dart';
+
 import 'package:news_app/homecon.dart';
 
 import 'package:url_launcher/url_launcher.dart';
@@ -24,6 +24,7 @@ class _HomeScreenState extends State {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         centerTitle: true,
         title: Text("TopStory",
             style: GoogleFonts.poppins(

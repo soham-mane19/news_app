@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/HomeScreen.dart';
+import 'package:news_app/SpalshScreen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,7 +14,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:  HomeScreen(),
+      home:  const Spalshscreen(),
     );
   }
 }
