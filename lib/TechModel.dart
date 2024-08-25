@@ -1,14 +1,14 @@
-class NewsModel {
+class TechModel {
     String? status;
     int? totalResults;
     List<Article>? articles;
 
-    NewsModel({
+    TechModel({
         this.status,
          this.totalResults,
          this.articles,
     });
-    NewsModel.fromjson(Map<String,dynamic> json){
+    TechModel.fromjson(Map<String,dynamic> json){
           
      status = json['status'];
     totalResults = json['totalResults'];

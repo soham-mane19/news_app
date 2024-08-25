@@ -63,7 +63,7 @@ class _EnterscreeState extends State {
           Padding(
             padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
             child: Text(
-              "Braking news",
+              "Entertainment news",
               style: GoogleFonts.poppins(
                   fontSize: 25, fontWeight: FontWeight.w700),
             ),
@@ -127,7 +127,7 @@ class _EnterscreeState extends State {
                                                 MainAxisAlignment.end,
                                             children: [
                                               Text(
-                                                articles[index].publishedAt!,
+                                                 articles[index].source!.name!
                                               ),
                                             ],
                                           ),
@@ -166,7 +166,7 @@ class _EnterscreeState extends State {
             }
              else if(catindex==1){
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                 return  const Tech();
+                 return  const TechScreen();
               },));
             }
             else if(catindex==2){

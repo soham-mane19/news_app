@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:news_app/EnterScree.dart';
+import 'package:news_app/HomeModel.dart';
 
-import 'package:news_app/NewsModel.dart';
+import 'package:news_app/TechModel.dart';
 import 'package:news_app/Sports.dart';
 import 'package:news_app/Tech.dart';
-import 'package:news_app/newsController.dart';
+import 'package:news_app/TechController.dart';
+import 'package:news_app/homecon.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -69,7 +71,7 @@ class _HomeScreenState extends State {
           ),
           Expanded(
             child: FutureBuilder(
-              future: Newscontroller().getNews(),
+              future: Homecon().getTopNews(),
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return  const SpinKitFadingCircle(color: Colors.green,);
@@ -80,7 +82,7 @@ class _HomeScreenState extends State {
                     snapshot.data!.articles!.isEmpty) {
                   return const Text('No articles found');
                 } else {
-                  List<Article> articles = snapshot.data.articles;
+                  List<Articles> articles = snapshot.data.articles;
                   return Padding(
                     padding:
                         const EdgeInsets.only(left: 20, right: 20, top: 20),
@@ -127,8 +129,8 @@ class _HomeScreenState extends State {
                                             mainAxisAlignment:
                                                 MainAxisAlignment.end,
                                             children: [
-                                              Text(
-                                                articles[index].publishedAt!,
+                                                Text(
+                                                 articles[index].source!.name!
                                               ),
                                             ],
                                           ),
@@ -167,7 +169,7 @@ class _HomeScreenState extends State {
             }
              else if(catindex==1){
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                 return  const Tech();
+                 return  const TechScreen();
               },));
             }
             else if(catindex==2){

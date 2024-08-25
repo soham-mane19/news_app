@@ -31,11 +31,11 @@ class  EntArticles {
   Source? source;
   String? author;
   String? title;
-  Null? description;
+  Null description;
   String? url;
-  Null? urlToImage;
+  Null urlToImage;
   String? publishedAt;
-  Null? content;
+  Null content;
 
   EntArticles(
       {this.source,

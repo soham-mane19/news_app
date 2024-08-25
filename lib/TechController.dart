@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:news_app/NewsModel.dart';
-class Newscontroller {
+import 'package:news_app/TechModel.dart';
+class Techcontroller {
 
 
    Future  getNews()async{
@@ -12,6 +12,6 @@ Uri url = Uri.parse("https://newsapi.org/v2/top-headlines?sources=techcrunch&api
               http.Response responce= await http.get(url);
              var  responcedata     = json.decode(responce.body);
 //print(responcedata);
-                      return NewsModel.fromjson(responcedata);
+                      return TechModel.fromjson(responcedata);
    }
 }
